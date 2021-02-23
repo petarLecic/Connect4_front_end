@@ -1,10 +1,9 @@
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from ''
 
 const StyledBtn = styled.button`
-    margin: 10px 10px;
-    padding: 10px;
+    margin: 1vw 1vw;
+    padding: 1vw;
     background: rgb(101, 182, 190);
     color: white;
     font-family: sans-serif;
@@ -19,7 +18,6 @@ const Home = () => {
     const history = useHistory()
     return (
         <div>
-            <img src={logo} alt="c4 logo"/>
             <StyledBtn onClick={() => history.push("/login")}>Login</StyledBtn>
             <StyledBtn onClick={() => history.push("/register")}>Register</StyledBtn>
             <StyledBtn onClick={() => history.push("/play")}>Connect4</StyledBtn>

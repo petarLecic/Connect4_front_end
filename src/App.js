@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Game from './components/Game'
 import Home from './components/Home'
 import Login from './components/Login'
+import Logo from './components/Logo'
+import NotFound from './components/NotFound'
 import Register from './components/Register'
 import Rules from './components/Rules'
 
@@ -32,6 +34,7 @@ const App = () => {
                 : null
             }
             <Router>
+                <Logo />  
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -47,6 +50,9 @@ const App = () => {
                     </Route>
                     <Route path="/rules">
                         <Rules />
+                    </Route>
+                    <Route path="/">
+                        <NotFound />
                     </Route>
                 </Switch>
             </Router>
