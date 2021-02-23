@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import styled from 'styled-components'
 import Game from './components/Game'
 import Home from './components/Home'
 import Login from './components/Login'
@@ -8,25 +7,15 @@ import Logo from './components/Logo'
 import NotFound from './components/NotFound'
 import Register from './components/Register'
 import Rules from './components/Rules'
-
-const UserStyled = styled.div`
-    position: absolute;
-    right: 0;
-    top: 0;
-`
-//colors
-// fern green : (97, 134, 65)
-// stiletto red : (163, 47, 53)
-// fountain blue: (101, 182, 190)
-// deco: (208, 226, 168)
+import { AppStyled, UserStyled } from './StyledComponents'
 
 const App = () => {
     const [user, setUser] = useState()
 
     return (
-        <>
+        <AppStyled>
             {user ? <UserStyled>
-                        <span>{user.firstName} {user.lastName}</span>
+                        <span>{user.firstName} {user.lastName}  </span>
                         <button onClick={() => {
                             setUser(null)
                         }}>Logout</button>
@@ -56,7 +45,7 @@ const App = () => {
                     </Route>
                 </Switch>
             </Router>
-        </>
+        </AppStyled>
     )
 }
 

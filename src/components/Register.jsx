@@ -1,20 +1,7 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import styled from 'styled-components'
 import { postUser } from '../service'
-
-export const StyledInput = styled.input `
-    display: block;
-    margin: 20px auto;
-`
-export const StyledError = styled.span`
-    display: flex;
-    justify-content: center;
-    padding: 1vw 1vw;
-    background: #fca0a0;
-    color: #d30000;
-    text-align: center;
-`
+import { ErrorStyled, FormStyled, InputStyled, SubmitBtnStyled } from '../StyledComponents'
 
 const Register = ({ user, setUser }) => {
     const [firstName, setFirstName] = useState('')
@@ -55,50 +42,50 @@ const Register = ({ user, setUser }) => {
     return user ?
     <h1>You have to logout first</h1>
     :
-    <form onSubmit={e => {
+    <FormStyled id="register" spellCheck={false} onSubmit={e => {
         e.preventDefault()
         register()
         }}
     >
-        <StyledInput type="text" placeholder="First Name" 
+        <InputStyled type="text" placeholder="First Name" 
             onChange={e => {
                 setError('')
                 setFirstName(e.target.value)
             }}
         />
-        <StyledInput type="text" placeholder="Last Name" 
+        <InputStyled type="text" placeholder="Last Name" 
             onChange={e => {
                 setError('')
                 setLastName(e.target.value)
             }}
         />
-        <StyledInput type="text" placeholder="Email adress" 
+        <InputStyled type="text" placeholder="Email adress" 
             onChange={e => {
                 setError('')
                 setEmail(e.target.value)
             }}
         />
-        <StyledInput type="text" placeholder="Username" 
+        <InputStyled type="text" placeholder="Username" 
             onChange={e => {
                 setError('')
                 setUsername(e.target.value)
             }}
         />
-        <StyledInput type="password" placeholder="Password" 
+        <InputStyled type="password" placeholder="Password" 
             onChange={e => {
                 setError('')
                 setPassword(e.target.value)
             }}
         />
-        <StyledInput type="password" placeholder="Confirm password" 
+        <InputStyled type="password" placeholder="Confirm password" 
             onChange={e => {
                 setError('')
                 setPassword2(e.target.value)
             }}
         />
-        {error ? <StyledError>{error}</StyledError> : null}
-        <StyledInput type="submit" value="Register"/>
-    </form>
+        {error ? <ErrorStyled>{error}</ErrorStyled> : null}
+        <SubmitBtnStyled type="submit" form="register">Register</SubmitBtnStyled>
+    </FormStyled>
 }
 
 export default Register
