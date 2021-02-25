@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { postUser } from '../service'
-import { ErrorStyled, FormStyled, InputStyled, SubmitBtnStyled } from '../StyledComponents'
+import { ButtonStyled, ErrorStyled, FormStyled, InputStyled } from '../StyledComponents'
 
 const Register = ({ user, setUser }) => {
     const [firstName, setFirstName] = useState('')
@@ -84,7 +84,7 @@ const Register = ({ user, setUser }) => {
             }}
         />
         {error ? <ErrorStyled>{error}</ErrorStyled> : null}
-        <SubmitBtnStyled type="submit" form="register">Register</SubmitBtnStyled>
+        <ButtonStyled type="submit" form="register">Register</ButtonStyled>
     </FormStyled>
 }
 

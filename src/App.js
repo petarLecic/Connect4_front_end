@@ -4,6 +4,7 @@ import Game from './components/Game'
 import Home from './components/Home'
 import Login from './components/Login'
 import Logo from './components/Logo'
+import MyProfile from './components/MyProfile'
 import NotFound from './components/NotFound'
 import Register from './components/Register'
 import Rules from './components/Rules'
@@ -14,19 +15,11 @@ const App = () => {
 
     return (
         <AppStyled>
-            {user ? <UserStyled>
-                        <span>{user.firstName} {user.lastName}  </span>
-                        <button onClick={() => {
-                            setUser(null)
-                        }}>Logout</button>
-                    </UserStyled>
-                : null
-            }
             <Router>
                 <Logo />  
                 <Switch>
                     <Route exact path="/">
-                        <Home />
+                        <Home user={user} setUser={setUser}/>
                     </Route>
                     <Route path="/login">
                         <Login setUser={setUser}/>
@@ -39,6 +32,9 @@ const App = () => {
                     </Route>
                     <Route path="/rules">
                         <Rules />
+                    </Route>
+                    <Route path="/myprofile">
+                        <MyProfile user={user} setUser={setUser}/>
                     </Route>
                     <Route path="/">
                         <NotFound />

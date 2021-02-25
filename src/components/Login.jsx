@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import { login } from "../service"
-import { ErrorStyled, FormStyled, InputStyled, SubmitBtnStyled } from "../StyledComponents"
+import { ButtonStyled, ErrorStyled, FormStyled, InputStyled } from "../StyledComponents"
 
 const Login = ({ setUser }) => {
     const [username, setUsername] = useState('')
@@ -58,7 +58,7 @@ const Login = ({ setUser }) => {
                 } 
             />
             {error ? <ErrorStyled>{error}</ErrorStyled> : null}
-            <SubmitBtnStyled type="submit" form="login">Login</SubmitBtnStyled>
+            <ButtonStyled type="submit" form="login">Login</ButtonStyled>
             <div>
                 <span>You don't have an account yet?   </span>
                 <Link to="/register">Sign Up</Link>

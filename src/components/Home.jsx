@@ -1,16 +1,26 @@
 import { useHistory } from 'react-router-dom'
-import { RouteBtnStyled, RoutesDivStyled } from '../StyledComponents'
+import { DivStyled, RouteBtnStyled, UserStyled } from '../StyledComponents'
 
-const Home = () => {
+const Home = ({ user, setUser }) => {
     const history = useHistory()
-    return (
-        <RoutesDivStyled>
+    return user ?
+        <div>
+            <DivStyled>
+                <UserStyled>Hi {user.username}!</UserStyled>
+                <RouteBtnStyled onClick={() => history.push("/play")}>Connect4</RouteBtnStyled>
+                <RouteBtnStyled onClick={() => history.push("/rules")}>Rules</RouteBtnStyled>
+                <RouteBtnStyled onClick={() => history.push("/myprofile")}>My Profile</RouteBtnStyled>
+                <RouteBtnStyled onClick={() => setUser(null)}>Logout</RouteBtnStyled>
+            </DivStyled>
+        </div>
+        :
+        <DivStyled>
             <RouteBtnStyled onClick={() => history.push("/login")}>Login</RouteBtnStyled>
             <RouteBtnStyled onClick={() => history.push("/register")}>Register</RouteBtnStyled>
             <RouteBtnStyled onClick={() => history.push("/play")}>Connect4</RouteBtnStyled>
             <RouteBtnStyled onClick={() => history.push("/rules")}>Rules</RouteBtnStyled>
-        </RoutesDivStyled>
-    )
+        </DivStyled>
+    
 }
 
 export default Home

@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const LogoStyled = styled.img`
-    width: 30vw;
-    height: 10vw;
+    width: 27vw;
+    height: 7vw;
     &:hover{
         cursor: pointer;
     }
@@ -20,13 +20,15 @@ export const AppStyled = styled.div`
     padding-bottom: 5%;
 `
 
-export const UserStyled = styled.div`
-position: absolute;
-right: 0;
-top: 0;
+export const UserStyled = styled.p`
+    width: 100%;
+    margin-bottom: 1vw;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
 `
-export const RoutesDivStyled = styled.div`
-    margin: 10%;
+export const DivStyled = styled.div`
+    margin: 7%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -38,7 +40,7 @@ export const RouteBtnStyled = styled.button`
     margin: 1vw 1vw;
     padding: 1vw;
     width: 40%;
-    height: 14vw;
+    height: 10vw;
     background: rgb(101, 182, 190);
     color: white;
     border: none;
@@ -62,13 +64,13 @@ export const FormStyled = styled.form`
 `
 export const InputStyled = styled.input `
     width: 50%;
-    height: 3vw;
+    height: 2vw;
     margin: 1vw;
     padding-left: 1vw;
     background: rgb(101, 182, 190);
     color: white;
     text-shadow: 1px 1px black;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 500;
     border-radius: 1vw;
     &::placeholder {
@@ -82,7 +84,7 @@ export const InputStyled = styled.input `
     }
 `
 
-export const SubmitBtnStyled = styled.button`
+export const ButtonStyled = styled.button`
     width: 40%;
     height: 3vw;
     margin: 3vw 5vw;
@@ -108,11 +110,23 @@ export const ErrorStyled = styled.div`
     width: 100%;
     background: #fca0a0;
     color: #d30000;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: center;
 
 `
 
+export const ParagraphStyled = styled.p`
+    width: 100%;
+    text-align: start;
+    margin-left: 1vw;
+    font-size: 1.5vw;
+`
+
+export const H1Styled = styled.h1`
+    width: 100%;
+    text-align: center;
+    margin: 1vw;
+`
 //colors
 // fern green : (97, 134, 65)
 // stiletto red : (163, 47, 53)

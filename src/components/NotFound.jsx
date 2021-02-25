@@ -1,5 +1,9 @@
+import { DivStyled, H1Styled } from "../StyledComponents"
+
 const NotFound = () => {
-    return <h1>404 Not Found</h1>
+    return <DivStyled>
+            <H1Styled>404 Not Found</H1Styled>
+        </DivStyled>
 }
 
 export default NotFound
