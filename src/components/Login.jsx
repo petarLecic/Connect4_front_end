@@ -1,3 +1,4 @@
+import { MD5 as encrypt } from "crypto-js"
 import { useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import { login } from "../service"
@@ -16,7 +17,8 @@ const Login = ({ setUser }) => {
     
     function handleLogin() {
         if (isValid(username, password)) {
-            login({username, password}).then(res => {
+            const pass = encrypt(password).toString()
+            login({username, pass}).then(res => {
                 if (res.data) {
                     setUser(res.data)
                     history.push('/')

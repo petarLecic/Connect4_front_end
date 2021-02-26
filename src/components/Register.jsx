@@ -1,3 +1,4 @@
+import { MD5 as encrypt } from 'crypto-js'
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { postUser } from '../service'
@@ -28,7 +29,8 @@ const Register = ({ user, setUser }) => {
 
     function register() {
         if (isValid(firstName, lastName, email, username, password, password2)) {
-            const user = {firstName, lastName, email, username, password}
+            const pass = encrypt(password).toString()
+            const user = {firstName, lastName, email, username, pass}
             postUser(user).then(res => {
                 if (typeof res.data == 'string') setError(res.data)
                 else {
