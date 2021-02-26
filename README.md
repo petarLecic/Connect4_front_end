@@ -9,16 +9,16 @@ This is the front end of Connect4 project, if you want to install this part on y
 
 ## Project installation steps:
 (Skip steps 1 and 2 if you already have Node and Git installed on your device)
-1. Install node (version 14.5.0 or higher)
-    Go to https://nodejs.org/en/ and download the node for your OS
-2. Install git 
-    Go to https://git-scm.com/downloads and download the latest version of git for your OS
-3. Open the terminal, navigate to desired directory and run command:
-    $git clone https://github.com/petarLecic/Connect4_front_end.git
-4. To install all dependencies run:
-    $npm install
-5. To open the project in the browser run:
-    $npm start
+1. **Install node (version 14.5.0 or higher)**
+    1. Go to https://nodejs.org/en/ and download the node for your OS
+2. **Install git**
+    1. Go to https://git-scm.com/downloads and download the latest version of git for your OS
+3. **Open the terminal, navigate to desired directory and run command:**
+    `$git clone https://github.com/petarLecic/Connect4_front_end.git`
+4. **To install all dependencies run:**
+    `$npm install`
+5. **To open the project in the browser run:**
+    `$npm start`
 
 ## Tools & Technologies:
 1. VS Code
