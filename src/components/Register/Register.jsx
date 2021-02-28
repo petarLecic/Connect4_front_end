@@ -1,12 +1,10 @@
 import { MD5 as encrypt } from 'crypto-js'
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import { postUser } from '../service'
-import { ButtonStyled, ErrorStyled, FormStyled, InputStyled } from '../StyledComponents'
+import { Link, useHistory } from 'react-router-dom'
+import { postUser } from '../../service'
+import { StyledForm } from '../Login/StyledForm'
 
 const Register = ({ user, setUser }) => {
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -16,10 +14,8 @@ const Register = ({ user, setUser }) => {
 
     const history = useHistory()
 
-    function isValid(firstName, lastName, email, username, password, password2) {
+    function isValid(email, username, password, password2) {
         if ([...arguments].some(arg => arg.trim().length === 0)) return setError('All fields are required')
-        if (!/^[A-Za-z]{2,}$/.test(firstName.trim())) return setError('First Name must include letters only (at last 2)')
-        if (!/^[A-Za-z]{2,}$/.test(lastName.trim())) return setError('Last Name must include letters only (at last 2)')
         if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) return setError('Invalid email')
         if (/[^\S]/.test(username.trim())) return setError('Username must not include spaces')
         if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) return setError('Password must include only letters and numbers (at last 8)')
@@ -28,9 +24,9 @@ const Register = ({ user, setUser }) => {
     }
 
     function register() {
-        if (isValid(firstName, lastName, email, username, password, password2)) {
+        if (isValid(email, username, password, password2)) {
             const pass = encrypt(password).toString()
-            const user = {firstName, lastName, email, username, pass}
+            const user = {email, username, pass}
             postUser(user).then(res => {
                 if (typeof res.data == 'string') setError(res.data)
                 else {
@@ -44,50 +40,41 @@ const Register = ({ user, setUser }) => {
     return user ?
     <h1>You have to logout first</h1>
     :
-    <FormStyled id="register" spellCheck={false} onSubmit={e => {
+    <StyledForm id="register" spellCheck={false} onSubmit={e => {
         e.preventDefault()
         register()
         }}
     >
-        <InputStyled type="text" placeholder="First Name" 
-            onChange={e => {
-                setError('')
-                setFirstName(e.target.value)
-            }}
-        />
-        <InputStyled type="text" placeholder="Last Name" 
-            onChange={e => {
-                setError('')
-                setLastName(e.target.value)
-            }}
-        />
-        <InputStyled type="text" placeholder="Email adress" 
+        <input type="text" placeholder="Email adress" 
             onChange={e => {
                 setError('')
                 setEmail(e.target.value)
             }}
         />
-        <InputStyled type="text" placeholder="Username" 
+        <input type="text" placeholder="Username" 
             onChange={e => {
                 setError('')
                 setUsername(e.target.value)
             }}
         />
-        <InputStyled type="password" placeholder="Password" 
+        <input type="password" placeholder="Password" 
             onChange={e => {
                 setError('')
                 setPassword(e.target.value)
             }}
         />
-        <InputStyled type="password" placeholder="Confirm password" 
+        <input type="password" placeholder="Confirm password" 
             onChange={e => {
                 setError('')
                 setPassword2(e.target.value)
             }}
         />
-        {error ? <ErrorStyled>{error}</ErrorStyled> : null}
-        <ButtonStyled type="submit" form="register">Register</ButtonStyled>
-    </FormStyled>
+        {error ? <p className="error">{error}</p> : null}
+        <button type="submit" form="register">Register</button>
+        <p>You already have account?
+            <Link to="/login">Login!</Link>
+        </p>
+    </StyledForm>
 }
 
 export default Register

@@ -1,22 +1,22 @@
 import { useState } from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Game from './components/Game'
-import Home from './components/Home'
-import Login from './components/Login'
-import Logo from './components/Logo'
-import MyProfile from './components/MyProfile'
+import Game from './components/Game/Game'
+import Home from './components/Home/Home'
+import Login from './components/Login/Login'
+import Header from './components/Header/Header'
+import MyAccount from './components/MyAccount/MyAccount'
 import NotFound from './components/NotFound'
-import Register from './components/Register'
-import Rules from './components/Rules'
-import { AppStyled, UserStyled } from './StyledComponents'
+import Register from './components/Register/Register'
+import Rules from './components/Rules/Rules'
+import { StyledApp } from './StyledApp'
 
 const App = () => {
     const [user, setUser] = useState()
 
     return (
-        <AppStyled>
+        <StyledApp>
             <Router>
-                <Logo />  
+                <Header/>  
                 <Switch>
                     <Route exact path="/">
                         <Home user={user} setUser={setUser}/>
@@ -34,14 +34,14 @@ const App = () => {
                         <Rules />
                     </Route>
                     <Route path="/myprofile">
-                        <MyProfile user={user} setUser={setUser}/>
+                        <MyAccount user={user} setUser={setUser}/>
                     </Route>
                     <Route path="/">
                         <NotFound />
                     </Route>
                 </Switch>
             </Router>
-        </AppStyled>
+        </StyledApp>
     )
 }
 

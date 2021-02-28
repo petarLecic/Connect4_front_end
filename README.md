@@ -12,11 +12,11 @@ This is the front end of Connect4 project, if you want to install this part on y
 2. **Install git**\
    	Go to https://git-scm.com/downloads and download the latest version of git for your OS
 3. **Open the terminal, navigate to desired directory and run command:**\
-    `$git clone https://github.com/petarLecic/Connect4_front_end.git`
+    `git clone https://github.com/petarLecic/Connect4_front_end.git`
 4. **To install all dependencies run:**\
-    `$npm install`
+    `npm install`
 5. **To open the project in the browser run:**\
-    `$npm start`
+    `npm start`
 
 ## Tools & Technologies:
 1. VS Code

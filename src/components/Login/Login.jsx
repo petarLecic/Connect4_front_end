@@ -1,8 +1,8 @@
 import { MD5 as encrypt } from "crypto-js"
 import { useState } from "react"
 import { Link, useHistory } from "react-router-dom"
-import { login } from "../service"
-import { ButtonStyled, ErrorStyled, FormStyled, InputStyled } from "../StyledComponents"
+import { login } from "../../service"
+import { StyledForm } from "./StyledForm"
 
 const Login = ({ setUser }) => {
     const [username, setUsername] = useState('')
@@ -34,23 +34,23 @@ const Login = ({ setUser }) => {
     }
 
     return (
-        <FormStyled 
+        <StyledForm 
         id="login" 
         spellCheck={false} 
         onSubmit={e => {
             e.preventDefault()
             handleLogin()
         }}>
-            <InputStyled 
+            <input 
                 type="text" 
                 placeholder="Username" 
                 value={username}
                 onChange={e => {
                     if (error) setError('')
                     setUsername(e.target.value)}
-                } 
+                }
             />
-            <InputStyled 
+            <input 
                 type="password" 
                 placeholder="Password" 
                 value={password}
@@ -59,13 +59,14 @@ const Login = ({ setUser }) => {
                     setPassword(e.target.value)}
                 } 
             />
-            {error ? <ErrorStyled>{error}</ErrorStyled> : null}
-            <ButtonStyled type="submit" form="login">Login</ButtonStyled>
+            {error ? <p className="error">{error}</p> : null}
+            <button type="submit" form="login">Login</button>
             <div>
-                <span>You don't have an account yet?   </span>
-                <Link to="/register">Sign Up</Link>
+                <p>You don't have an account yet?
+                    <Link to="/register">Sign Up!</Link>
+                </p>
             </div>
-        </FormStyled>
+        </StyledForm>
     )
 }
 
