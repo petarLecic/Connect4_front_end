@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Game from './components/Game/Game'
+import Play from './components/Play/Game'
 import Home from './components/Home/Home'
 import Login from './components/Login/Login'
 import Header from './components/Header/Header'
@@ -28,7 +28,7 @@ const App = () => {
                         <Register user={user} setUser={setUser}/>
                     </Route>
                     <Route path="/play">
-                        <Game user={user}/>
+                        <Play user={user}/>
                     </Route>
                     <Route path="/rules">
                         <Rules />

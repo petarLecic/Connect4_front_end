@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom"
 import { StyledHeader } from "./StyledHeader"
 import logo from '../../images/c4_logo.png'
 
-const Logo = ({ user }) => {
+const Logo = () => {
     const history = useHistory()
     return (
         <StyledHeader>

@@ -1,9 +1,7 @@
-import { DivStyled, H1Styled } from "../StyledComponents"
-
 const NotFound = () => {
-    return <DivStyled>
-            <H1Styled>404 Not Found</H1Styled>
-        </DivStyled>
+    return <div>
+            <h1 style={{padding: '5vw 15vw'}}>404 Not Found</h1>
+        </div>
 }
 
 export default NotFound
