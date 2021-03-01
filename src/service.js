@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:3001/'
+const BASE_URL = 'https://conn4.herokuapp.com/'
 const LOGIN = 'login/'
 const REGISTER = 'register/'
 const USERS = 'users/'
