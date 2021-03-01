@@ -30,6 +30,8 @@ export const StyledGame = styled.div`
         }
     }
     h1 {
+        font-size: 3vw;
+        margin-bottom: 2vw;
         text-align: center;
     }
 `

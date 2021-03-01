@@ -8,5 +8,5 @@ export const StyledGrid = styled.div`
     display: flex;
     margin: 1vw 5vw;
     padding: 1vw;
-    transform: rotate(0.5turn);
+    transform: rotateX(0.5turn);
 `
