@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/petarLecic.github.io/Connect4_front_end/static/js/main.7eb8d170.chunk.js",
-    "main.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/main.7eb8d170.chunk.js.map",
-    "runtime-main.js": "/petarLecic.github.io/Connect4_front_end/static/js/runtime-main.08f1373e.js",
-    "runtime-main.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/runtime-main.08f1373e.js.map",
-    "static/js/2.7fcf7c4d.chunk.js": "/petarLecic.github.io/Connect4_front_end/static/js/2.7fcf7c4d.chunk.js",
-    "static/js/2.7fcf7c4d.chunk.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/2.7fcf7c4d.chunk.js.map",
-    "index.html": "/petarLecic.github.io/Connect4_front_end/index.html",
-    "static/js/2.7fcf7c4d.chunk.js.LICENSE.txt": "/petarLecic.github.io/Connect4_front_end/static/js/2.7fcf7c4d.chunk.js.LICENSE.txt",
-    "static/media/c4_logo.2a91b469.png": "/petarLecic.github.io/Connect4_front_end/static/media/c4_logo.2a91b469.png"
+    "main.js": "/Connect4_front_end/static/js/main.7eb8d170.chunk.js",
+    "main.js.map": "/Connect4_front_end/static/js/main.7eb8d170.chunk.js.map",
+    "runtime-main.js": "/Connect4_front_end/static/js/runtime-main.4b997e88.js",
+    "runtime-main.js.map": "/Connect4_front_end/static/js/runtime-main.4b997e88.js.map",
+    "static/js/2.1c89a933.chunk.js": "/Connect4_front_end/static/js/2.1c89a933.chunk.js",
+    "static/js/2.1c89a933.chunk.js.map": "/Connect4_front_end/static/js/2.1c89a933.chunk.js.map",
+    "index.html": "/Connect4_front_end/index.html",
+    "static/js/2.1c89a933.chunk.js.LICENSE.txt": "/Connect4_front_end/static/js/2.1c89a933.chunk.js.LICENSE.txt",
+    "static/media/c4_logo.2a91b469.png": "/Connect4_front_end/static/media/c4_logo.2a91b469.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.08f1373e.js",
-    "static/js/2.7fcf7c4d.chunk.js",
+    "static/js/runtime-main.4b997e88.js",
+    "static/js/2.1c89a933.chunk.js",
     "static/js/main.7eb8d170.chunk.js"
   ]
 }
