@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledGame = styled.div`
-    padding-bottom: 2vw;
+    padding-bottom: 30px;
     button {
         background: linear-gradient(145deg, #6cc3cb, #5ba4ab);
         border: none;
@@ -9,11 +9,11 @@ export const StyledGame = styled.div`
         box-shadow:  5px 5px 5px #646c51,
                     -5px -5px 5px #dff2b4;
         color: white;
-        font-size: 2.5vw;
+        font-size: 35px;
         font-weight: bold;
-        height: 4vw;
-        margin: 1vw 17vw;
-        padding: 0 5vw;
+        height: 55px;
+        margin: 15px 238px;
+        padding: 0 65px;
         text-shadow: 1px 2px black;
         &:active {
             background: #a32f35;
@@ -30,8 +30,7 @@ export const StyledGame = styled.div`
         }
     }
     h1 {
-        font-size: 3vw;
-        margin-bottom: 2vw;
+        font-size: 40px;
         text-align: center;
     }
 `

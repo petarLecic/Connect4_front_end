@@ -6,7 +6,12 @@ export const StyledGrid = styled.div`
     box-shadow: -10px -10px 10px #474746,
                 10px 10px 10px #dff2b4;
     display: flex;
-    margin: 1vw 5vw;
-    padding: 1vw;
+    justify-content: center;
+    margin: 15px 85px;
+    padding: 5px 0;
     transform: rotateX(0.5turn);
+    width: 530px;
+    .column {
+        width: 70px;
+    }
 `

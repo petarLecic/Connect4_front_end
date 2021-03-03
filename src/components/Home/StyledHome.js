@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledHome = styled.div`
-    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 2vw;
+    padding-bottom: 30px;
     button {
         background: linear-gradient(145deg, #6cc3cb, #5ba4ab);
         border: none;
@@ -13,11 +12,10 @@ export const StyledHome = styled.div`
         box-shadow:  5px 5px 5px #646c51,
                     -5px -5px 5px #dff2b4;
         color: white;
-        font-size: 3vw;
+        font-size: 40px;
         font-weight: bold;
-        height: 10vw;
-        margin: 1vw;
-        padding: 1vw;
+        height: 140px;
+        margin: 14px;
         text-shadow: 1px 2px black;
         width: 40%;
         &:active {
@@ -35,10 +33,10 @@ export const StyledHome = styled.div`
         }
     }
     h1 {
-        font-size: 3vw;
+        font-size: 35px;
         font-style: italic;
-        margin-bottom: 3vw;
+        margin-bottom: 30px;
         text-align: center;
-        width: 59vw;
+        width: 100%;
     }
 `

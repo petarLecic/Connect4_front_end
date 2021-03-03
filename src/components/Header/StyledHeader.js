@@ -2,9 +2,8 @@ import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
     img {
-        height: 8vw;
-        margin: 1vw 11.5vw;
-        width: 27vw;
+        margin: 15px 165px;
+        width: 370px;
         &:hover {
             cursor: pointer;
         }

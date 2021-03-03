@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const StyledMyAccount = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2vw;
     button {
         background: linear-gradient(145deg, #6cc3cb, #5ba4ab);
         border: none;
@@ -11,11 +10,11 @@ export const StyledMyAccount = styled.div`
         box-shadow:  5px 5px 5px #646c51,
                     -5px -5px 5px #dff2b4;
         color: white;
-        font-size: 2.5vw;
+        font-size: 30px;
         font-weight: bold;
-        height: 4vw;
-        margin: 1vw;
-        padding: 0 3vw;
+        height: 55px;
+        margin: 15px;
+        padding: 0 40px;
         text-shadow: 1px 2px black;
         &:active {
             background: #a32f35;
@@ -34,27 +33,26 @@ export const StyledMyAccount = styled.div`
     div {
         display: flex;
         justify-content: center;
-        margin: 2vw 2.9vw;
-        padding-bottom: 1vw;
+        margin: 30px 63px;
     }
     h1 {
-        font-size: 3vw;
-        margin: 1vw 20.8vw;
+        font-size: 45px;
+        margin: 15px 292px;
     }
     p {
-        font-size: 2vw;
-        margin-left: 9vw;
-        width: 13vw;
+        font-size: 25px;
+        margin-left: 125px;
+        width: 180px;
     }
     .remove {
         background-color: grey;
-        border-radius: 2vw;
+        border-radius: 30px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         button {
             background: #a32f35;
-            border-radius: 34px;
+            border-radius: 30px;
             box-shadow:  5px 5px 5px #411315;
                         /* -5px -5px 5px #ff4b55; */
             &:active {
@@ -65,19 +63,18 @@ export const StyledMyAccount = styled.div`
             }
         }
         input {
-            font-size: 1.8vw;
+            font-size: 25px;
             font-weight: bold;
-            height: 2vw;
-            margin: 0.8vw;
-            padding-bottom: 0.5vw;
+            margin: 10px;
+            padding-bottom: 2px;
             text-align: center;
             width: 70%;
         }
         p {
             color: black;
-            font-size: 1.8vw;
+            font-size: 25px;
             font-weight: bold;
-            margin: 0.8vw;
+            margin: 10px;
             text-align: center;
             width: 100%;
         }

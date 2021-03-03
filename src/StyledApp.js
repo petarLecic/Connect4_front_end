@@ -4,8 +4,8 @@ export const StyledApp = styled.div`
     background-color: rgb(208, 226, 168);
     border-radius: 30px;
     box-shadow: 5px 5px 5px #474746;
-    margin: 1vw auto;
-    width: 50vw;
+    margin: 15px auto;
+    width: 700px;
 `
 //colors
 // fern green : (97, 134, 65)

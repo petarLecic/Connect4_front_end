@@ -4,7 +4,6 @@ export const StyledForm = styled.form`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 3vw;
     button {
         background: linear-gradient(145deg, #6cc3cb, #5ba4ab);
         border: none;
@@ -12,11 +11,11 @@ export const StyledForm = styled.form`
         box-shadow:  5px 5px 5px #646c51,
                     -5px -5px 5px #dff2b4;
         color: white;
-        font-size: 2.5vw;
+        font-size: 35px;
         font-weight: bold;
-        height: 4vw;
-        margin: 1vw 20vw;
-        padding: 0 5vw;
+        height: 55px;
+        margin: 15px 300px;
+        padding: 0 70px;
         text-shadow: 1px 2px black;
         &:active {
             background: #a32f35;
@@ -38,12 +37,12 @@ export const StyledForm = styled.form`
         box-shadow: inset 2px 2px 5px #28494c,
                     inset -2px -2px 5px #a2ffff;
         color: white;
-        font-size: 2vw;
+        font-size: 30px;
         font-weight: 500;
-        height: 3vw;
-        margin: 1vw;
-        padding-bottom: 0.4vw;
-        padding-left: 2vw;
+        height: 40px;
+        margin: 15px;
+        padding-bottom: 5px;
+        padding-left: 25px;
         text-shadow: 1px 1px black;
         width: 50%;
         &:focus {
@@ -60,16 +59,17 @@ export const StyledForm = styled.form`
         }
     }
     p {
-        font-size: 1.5vw;
-        margin: 2vw;
+        font-size: 25px;
+        margin: 30px;
         a {
-            padding-left: 1vw;
+            padding-left: 13px;
         }
     }
     .error {
         background: #fca0a0;
         color: #d30000;
-        margin: 1vw 0;
+        font-size: 30px;
+        margin: 13px 0;
         text-align: center;
         width: 100%;
     }

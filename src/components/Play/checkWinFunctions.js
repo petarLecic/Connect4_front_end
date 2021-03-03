@@ -8,7 +8,6 @@ function checkVertically(move, arrays) {
     for (let i = move.index - 1; i >= 0; i--) {
         if (arrays[move.col][i] == move.player) {
             if (++count == 4) {
-                console.log('vertical 1')
                 return true
             }
         }
@@ -17,7 +16,6 @@ function checkVertically(move, arrays) {
     for (let i = move.index + 1; i < 6; i++) {
         if (arrays[move.col][i] == move.player) {
             if (++count == 4) {
-                console.log('vertical 2')
                 return true
             }
         }
@@ -31,7 +29,6 @@ function checkHorizontaly(move, arrays) {
     for (let i = move.col - 1; i >= 0; i--) {
         if (arrays[i][move.index] == move.player) {
             if (++count == 4) {
-                console.log('horizontal 1')
                 return true
             }
         }
@@ -40,7 +37,6 @@ function checkHorizontaly(move, arrays) {
     for (let i = move.col + 1; i < 7 ; i++) {
         if (arrays[i][move.index] == move.player) {
             if (++count == 4) {
-                console.log('horizontal 2')
                 return true
             }
         }
@@ -54,7 +50,6 @@ function checkLeftDiagonal(move, arrays) {
     for (let i = move.col - 1, j = move.index - 1; i >= 0 && j >= 0; i--, j--) {
         if (arrays[i][j] == move.player) {
             if (++count == 4) {
-                console.log('left 1')
             return true
             }
         }
@@ -63,7 +58,6 @@ function checkLeftDiagonal(move, arrays) {
     for (let i = move.col + 1, j = move.index + 1; i < 7 && j < 7; i++, j++) {
         if (arrays[i][j] == move.player) {
             if (++count == 4) {
-                console.log('left 2')
             return true
             }
         }
@@ -77,7 +71,6 @@ function checkRightDiagonal(move, arrays) {
     for (let i = move.col - 1, j = move.index + 1; i >= 0 && j < 6; i--, j++) {
         if (arrays[i][j] == move.player) {
             if (++count == 4) {
-                console.log('right 1')
             return true
             }
         }
@@ -86,7 +79,6 @@ function checkRightDiagonal(move, arrays) {
     for (let i = move.col + 1, j = move.index - 1; i < 7 && j >= 0; i++, j--) {
         if (arrays[i][j] == move.player) {
             if (++count == 4) {
-                console.log('right 2')
             return true
             }
         }

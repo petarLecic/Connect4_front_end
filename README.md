@@ -31,9 +31,9 @@ This is the front end of Connect4 project, if you want to install this part on y
 1. Creating new account
 2. Login / Logout
 3. Remove account
-4. Player vs Player - same device (see Possible updates)
+4. Player vs Player - same device
 
-### Possible updates
+### Updates coming
 1. Player vs Player - remotely
 2. Player vs Computer
 
@@ -41,4 +41,4 @@ This is the front end of Connect4 project, if you want to install this part on y
 https://github.com/petarLecic/Connect4_back_end
 
 ## Play the game at:
-https://github.com
+https://petarlecic.github.io/Connect4_front_end/

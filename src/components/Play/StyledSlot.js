@@ -5,7 +5,7 @@ export const StyledSlot = styled.div`
     border: 2px solid #373765;
     border-radius: 50px;
     box-shadow: inset 3px 3px 10px black;
-    height: 4vw;
-    margin: 0.5vw;
-    width: 4vw;
+    height: 55px;
+    margin: 5px;
+    width: 55px;
 `
