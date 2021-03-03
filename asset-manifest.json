@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/petarLecic.github.io/Connect4_front_end/static/js/main.ee6489c9.chunk.js",
-    "main.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/main.ee6489c9.chunk.js.map",
-    "runtime-main.js": "/petarLecic.github.io/Connect4_front_end/static/js/runtime-main.07014564.js",
-    "runtime-main.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/runtime-main.07014564.js.map",
-    "static/js/2.7068d13c.chunk.js": "/petarLecic.github.io/Connect4_front_end/static/js/2.7068d13c.chunk.js",
-    "static/js/2.7068d13c.chunk.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/2.7068d13c.chunk.js.map",
+    "main.js": "/petarLecic.github.io/Connect4_front_end/static/js/main.7eb8d170.chunk.js",
+    "main.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/main.7eb8d170.chunk.js.map",
+    "runtime-main.js": "/petarLecic.github.io/Connect4_front_end/static/js/runtime-main.08f1373e.js",
+    "runtime-main.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/runtime-main.08f1373e.js.map",
+    "static/js/2.7fcf7c4d.chunk.js": "/petarLecic.github.io/Connect4_front_end/static/js/2.7fcf7c4d.chunk.js",
+    "static/js/2.7fcf7c4d.chunk.js.map": "/petarLecic.github.io/Connect4_front_end/static/js/2.7fcf7c4d.chunk.js.map",
     "index.html": "/petarLecic.github.io/Connect4_front_end/index.html",
-    "static/js/2.7068d13c.chunk.js.LICENSE.txt": "/petarLecic.github.io/Connect4_front_end/static/js/2.7068d13c.chunk.js.LICENSE.txt",
+    "static/js/2.7fcf7c4d.chunk.js.LICENSE.txt": "/petarLecic.github.io/Connect4_front_end/static/js/2.7fcf7c4d.chunk.js.LICENSE.txt",
     "static/media/c4_logo.2a91b469.png": "/petarLecic.github.io/Connect4_front_end/static/media/c4_logo.2a91b469.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.07014564.js",
-    "static/js/2.7068d13c.chunk.js",
-    "static/js/main.ee6489c9.chunk.js"
+    "static/js/runtime-main.08f1373e.js",
+    "static/js/2.7fcf7c4d.chunk.js",
+    "static/js/main.7eb8d170.chunk.js"
   ]
 }
