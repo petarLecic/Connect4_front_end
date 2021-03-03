@@ -15,7 +15,7 @@ const App = () => {
 
     return (
         <StyledApp>
-            <Router>
+            <Router basename='Connect4_front_end'>
                 <Header/>  
                 <Switch>
                     <Route exact path="/">
