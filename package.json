@@ -1,6 +1,6 @@
 {
-  "homepage": "petarLecic.github.io/Connect4_front_end",
-  "name": "connect4_front",
+  "homepage": "https://httppetarlecic.github.io/Connect4_front_end",
+  "name": "connect4_front_end",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
