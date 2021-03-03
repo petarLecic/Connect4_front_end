@@ -3,7 +3,6 @@
 Connect4 is web application that simulates the connection board game of the same name. This game is also known as Four Up, Plot Four, Find Four, Captain's Mistress, Four in a Row, Drop Four (Gravitrips in the Soviet Union). Players (two) take turns dropping colored discs into a seven-column, six-row grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs. The app keeps the score for each player and calculates win percentage (both can be seen under "My profile").
 
 This is the front end of Connect4 project, if you want to install this part on your device follow the steps below...\
-(Keep in mind you'll need to do the same for the back end part in order to get all functionalities)
 
 ## Project installation steps:
 (Skip steps 1 and 2 if you already have Node and Git installed on your device)
