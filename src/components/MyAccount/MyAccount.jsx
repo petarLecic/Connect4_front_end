@@ -27,7 +27,7 @@ const MyProfile = ({ user, setUser }) => {
             <p><b>Email:</b> {user.email}</p>
             <p><b>Username:</b> {user.username}</p>
             <h1>Score</h1>
-            <p><b>Win rate:</b> {Math.round(user.score.won * 100 / user.score.played)}%</p>
+            <p><b>Win rate:</b> {winPercentage()}%</p>
             <p><b>Played:</b> {user.score.played}</p>
             <p><b>Won:</b> {user.score.won}</p>
             <p><b>Lost:</b> {user.score.lost}</p>

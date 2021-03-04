@@ -10,11 +10,11 @@ export const StyledMyAccount = styled.div`
         box-shadow:  5px 5px 5px #646c51,
                     -5px -5px 5px #dff2b4;
         color: white;
-        font-size: 30px;
+        font-size: 15px;
         font-weight: bold;
-        height: 55px;
+        height: 45px;
         margin: 15px;
-        padding: 0 40px;
+        padding: 0 20px;
         text-shadow: 1px 2px black;
         &:active {
             background: #a32f35;
@@ -33,16 +33,18 @@ export const StyledMyAccount = styled.div`
     div {
         display: flex;
         justify-content: center;
-        margin: 30px 63px;
+        margin: 20px 0;
+        width: 100%;
     }
     h1 {
-        font-size: 45px;
-        margin: 15px 292px;
+        font-size: 35px;
+        text-align: center;
+        width: 100%;
     }
     p {
-        font-size: 25px;
-        margin-left: 125px;
-        width: 180px;
+        font-size: 15px;
+        margin: 1% 10%;
+        width: 80%;
     }
     .remove {
         background-color: grey;
@@ -54,7 +56,6 @@ export const StyledMyAccount = styled.div`
             background: #a32f35;
             border-radius: 30px;
             box-shadow:  5px 5px 5px #411315;
-                        /* -5px -5px 5px #ff4b55; */
             &:active {
                 background: #a32f35;
                 border-radius: 30px;
@@ -63,20 +64,44 @@ export const StyledMyAccount = styled.div`
             }
         }
         input {
-            font-size: 25px;
             font-weight: bold;
-            margin: 10px;
+            margin: 1% 20%;
             padding-bottom: 2px;
             text-align: center;
-            width: 70%;
+            width: 60%;
         }
         p {
             color: black;
-            font-size: 25px;
             font-weight: bold;
             margin: 10px;
             text-align: center;
             width: 100%;
+        }
+    }
+    @media (min-width: 495px) {
+        button {
+            font-size: 20px;
+        }
+        input {
+            font-size: 20px;
+        }
+        p {
+            font-size: 20px;
+            margin: 1% 10%;
+            width: 30%
+        }
+    }
+    @media (min-width: 700px) {
+        button {
+            font-size: 30px;
+            height: 55px;
+        }
+        h1 {
+            font-size: 45px;
+        }
+        p {
+            margin: 0 15%;
+            width: 20%;
         }
     }
 `

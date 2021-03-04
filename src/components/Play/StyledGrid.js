@@ -7,11 +7,14 @@ export const StyledGrid = styled.div`
                 10px 10px 10px #dff2b4;
     display: flex;
     justify-content: center;
-    margin: 15px 85px;
-    padding: 5px 0;
+    margin: 5% 10%;
+    padding: 1% 0;
     transform: rotateX(0.5turn);
-    width: 530px;
-    .column {
-        width: 70px;
-    }
+    width: 80%;
+    /* @media (min-width: 400px) {
+        width: 80%;
+        .column {
+            width: 14%;
+        }
+    } */
 `

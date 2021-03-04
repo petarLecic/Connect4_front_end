@@ -11,11 +11,11 @@ export const StyledForm = styled.form`
         box-shadow:  5px 5px 5px #646c51,
                     -5px -5px 5px #dff2b4;
         color: white;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: bold;
-        height: 55px;
+        height: 45px;
         margin: 15px 300px;
-        padding: 0 70px;
+        padding: 0 25px;
         text-shadow: 1px 2px black;
         &:active {
             background: #a32f35;
@@ -37,7 +37,7 @@ export const StyledForm = styled.form`
         box-shadow: inset 2px 2px 5px #28494c,
                     inset -2px -2px 5px #a2ffff;
         color: white;
-        font-size: 30px;
+        font-size: 17px;
         font-weight: 500;
         height: 40px;
         margin: 15px;
@@ -59,8 +59,8 @@ export const StyledForm = styled.form`
         }
     }
     p {
-        font-size: 25px;
-        margin: 30px;
+        font-size: 20px;
+        margin: 20px;
         a {
             padding-left: 13px;
         }
@@ -72,5 +72,33 @@ export const StyledForm = styled.form`
         margin: 13px 0;
         text-align: center;
         width: 100%;
+    }
+    @media (min-width: 405px) {
+        button {
+            padding: 0 45px;
+        }
+        input {
+            font-size: 20px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    @media (min-width: 700px) {
+        button {
+            font-size: 35px;
+            height: 55px;
+            padding: 0 70px;
+        }
+        input {
+            font-size: 25px
+        }
+        p {
+            font-size: 25px;
+            margin: 30px;
+            a {
+            padding-left: 13px;
+        }
+        }
     }
 `

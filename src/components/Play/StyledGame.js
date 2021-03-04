@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 export const StyledGame = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-bottom: 30px;
     button {
         background: linear-gradient(145deg, #6cc3cb, #5ba4ab);
@@ -9,11 +12,10 @@ export const StyledGame = styled.div`
         box-shadow:  5px 5px 5px #646c51,
                     -5px -5px 5px #dff2b4;
         color: white;
-        font-size: 35px;
+        font-size: 25px;
         font-weight: bold;
-        height: 55px;
-        margin: 15px 238px;
-        padding: 0 65px;
+        height: 45px;
+        padding: 0 45px;
         text-shadow: 1px 2px black;
         &:active {
             background: #a32f35;
@@ -30,7 +32,18 @@ export const StyledGame = styled.div`
         }
     }
     h1 {
-        font-size: 40px;
+        font-size: 30px;
         text-align: center;
+        width: 100%;
+    }
+    @media (min-width: 700px) {
+        button {
+            font-size: 35px;
+            height: 55px;
+            padding: 0 65px;
+        }
+        h1 {
+            font-size: 40px;
+        }
     }
 `

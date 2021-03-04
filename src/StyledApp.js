@@ -5,7 +5,10 @@ export const StyledApp = styled.div`
     border-radius: 30px;
     box-shadow: 5px 5px 5px #474746;
     margin: 15px auto;
-    width: 700px;
+    width: 90%;
+    @media (min-width: 700px) {
+        width: 700px;
+    }
 `
 //colors
 // fern green : (97, 134, 65)
