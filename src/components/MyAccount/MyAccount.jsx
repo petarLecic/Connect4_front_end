@@ -41,6 +41,7 @@ const MyProfile = ({ user, setUser }) => {
                 </div>
                 :
                 <div>
+                    <button onClick={() => history.push('/')}>Back</button>
                     <button onClick={() => setUser(null)}>Logout</button>
                     <button onClick={() => setShowRemove(true)}>Remove Account</button>
                 </div>

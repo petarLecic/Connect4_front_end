@@ -32,6 +32,7 @@ export const StyledMyAccount = styled.div`
     }
     div {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         margin: 20px 0;
         width: 100%;
