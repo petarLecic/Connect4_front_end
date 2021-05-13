@@ -61,6 +61,7 @@ const Login = ({ setUser }) => {
             />
             {error ? <p className="error">{error}</p> : null}
             <button type="submit" form="login">Login</button>
+            <button onClick={() => history.push('/')}>Back</button>
             <div>
                 <p>You don't have an account yet?
                     <Link to="/register">Sign Up!</Link>

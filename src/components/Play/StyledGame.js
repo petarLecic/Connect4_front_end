@@ -15,6 +15,7 @@ export const StyledGame = styled.div`
         font-size: 25px;
         font-weight: bold;
         height: 45px;
+        margin: 10px;
         padding: 0 45px;
         text-shadow: 1px 2px black;
         &:active {

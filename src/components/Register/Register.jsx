@@ -71,6 +71,7 @@ const Register = ({ user, setUser }) => {
         />
         {error ? <p className="error">{error}</p> : null}
         <button type="submit" form="register">Register</button>
+        <button onClick={() => history.push('/')}>Back</button>
         <p>You already have account?
             <Link to="/login">Login!</Link>
         </p>

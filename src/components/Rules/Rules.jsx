@@ -16,6 +16,7 @@ const Rules = () => {
                 The rules of the game are easy to learn, but difficult to master. That is the beauty of Connect Four. Now that you know the Connect 4 board game rules, now is the time to challenge everyone you know. No matter their age or skill level, they can play this game with you. Now that you understand the rules, share Connect Four with everyone around you. You’ll be glad you did.
             </p>
             <button onClick={() => history.push('/play')}>Play</button>
+            <button onClick={() => history.push('/')}>Back</button>
         </StyledRules>
     )
 }

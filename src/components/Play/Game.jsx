@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import { Redirect } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import { didWin } from "./checkWinFunctions"
 import Grid from "./Grid"
 import { StyledGame } from "./StyledGame"
 
 const Game = ({ user }) => {
+    const history = useHistory()
     const [player, setPlayer] = useState(Math.random() > 0.5 ? 'Blue' : 'Red')
     const [columns, setColumns] = useState(new Array(7).fill(new Array(6).fill(undefined)))
     const [message, setMessage] = useState('')
@@ -34,7 +36,7 @@ const Game = ({ user }) => {
     else if (message.includes('tie')) messageBackground = 'rgb(152, 154, 156)'
 
 
-    return user ?
+    return (
         <StyledGame>
             <h1 style={message ? {background: messageBackground} : null}>
                 {message ? message : player == 'Red' ? "Red is playing" : "Blue is playing"}
@@ -49,9 +51,9 @@ const Game = ({ user }) => {
             >
                 Reset
             </button>
+            <button onClick={() => history.push('/')}>Back</button>
         </StyledGame>
-        :
-        <Redirect to='/login' />
+    )
 }
 
 export default Game
