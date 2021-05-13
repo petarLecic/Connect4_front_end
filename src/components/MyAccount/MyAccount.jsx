@@ -2,10 +2,12 @@ import { Redirect, useHistory } from "react-router-dom"
 import { StyledMyAccount } from "./StyledMyAccount"
 import { deleteAcc } from "../../service"
 import { useState } from "react"
+import Loading from "../Loading/Loading"
 
 const MyProfile = ({ user, setUser }) => {
     const [showRemove, setShowRemove] = useState(false)
     const [inputRemove, setInputRemove] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
     const history = useHistory()
 
     function winPercentage() {
@@ -18,6 +20,7 @@ const MyProfile = ({ user, setUser }) => {
             deleteAcc(user).then(res => {
                 if (res.data == 1) setUser(null)
             })
+            setIsLoading(true)
         }
         else setShowRemove(false)
     }
@@ -46,6 +49,7 @@ const MyProfile = ({ user, setUser }) => {
                     <button onClick={() => setShowRemove(true)}>Remove Account</button>
                 </div>
             }
+            { isLoading ? <Loading/> : null }
         </StyledMyAccount>
         :
         <Redirect to="/" />

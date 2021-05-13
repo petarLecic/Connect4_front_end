@@ -3,11 +3,13 @@ import { useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import { login } from "../../service"
 import { StyledForm } from "./StyledForm"
+import Loading from "../Loading/Loading"
 
 const Login = ({ setUser }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
 
     const history = useHistory()
 
@@ -17,13 +19,17 @@ const Login = ({ setUser }) => {
     
     function handleLogin() {
         if (isValid(username, password)) {
+            setIsLoading(true)
             const pass = encrypt(password).toString()
             login({username, pass}).then(res => {
                 if (res.data) {
                     setUser(res.data)
                     history.push('/')
                 }
-                else setError('Wrong inputs')
+                else {
+                    setIsLoading(false)
+                    setError('Wrong inputs')
+                }
             })
         }
         else {
@@ -67,6 +73,7 @@ const Login = ({ setUser }) => {
                     <Link to="/register">Sign Up!</Link>
                 </p>
             </div>
+            { isLoading ? <Loading/> : null }
         </StyledForm>
     )
 }

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { postUser } from '../../service'
 import { StyledForm } from '../Login/StyledForm'
+import Loading from '../Loading/Loading'
 
 const Register = ({ user, setUser }) => {
     const [email, setEmail] = useState('')
@@ -11,6 +12,7 @@ const Register = ({ user, setUser }) => {
     const [password2, setPassword2] = useState('')
     
     const [error, setError] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
 
     const history = useHistory()
 
@@ -25,10 +27,14 @@ const Register = ({ user, setUser }) => {
 
     function register() {
         if (isValid(email, username, password, password2)) {
+            setIsLoading(true)
             const pass = encrypt(password).toString()
             const user = {email, username, pass}
             postUser(user).then(res => {
-                if (typeof res.data == 'string') setError(res.data)
+                if (typeof res.data == 'string') {
+                    setIsLoading(false)
+                    setError(res.data)
+                }
                 else {
                     setUser(res.data)
                     history.push('/')
@@ -75,6 +81,7 @@ const Register = ({ user, setUser }) => {
         <p>You already have account?
             <Link to="/login">Login!</Link>
         </p>
+        { isLoading ? <Loading/> : null }
     </StyledForm>
 }
 
