@@ -20,11 +20,11 @@ const Game = ({ user }) => {
 
     function move(index) {
         if (message) return
-        setMovesCounter(prev => prev + 1)
         let tmp = JSON.parse(JSON.stringify(columns)) // Deep cloning columns (converts undefined to null)
         const i = tmp[index].findIndex(el => typeof el == 'object') // typeof null is object
         if (i == -1) return
         tmp[index][i] = player
+        setMovesCounter(prev => prev + 1)
         setColumns(tmp)
         setMoveObj({player, col: index, index: i})
         setPlayer(prev => prev == 'Red' ? 'Blue' : 'Red')
